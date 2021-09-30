@@ -1,3 +1,24 @@
 [2021-09-30 14:34:39] [ ERROR] [GlobalExceptionHandler:18] No existe un odontólogo con ese id.
 [2021-09-30 14:49:08] [ ERROR] [GlobalExceptionHandler:18] No existe un odontólogo con ese id.
 [2021-09-30 15:08:57] [ ERROR] [GlobalExceptionHandler:18] could not execute statement; SQL [n/a]; constraint [FKQTJ6T7MULC2JMFKV92X4CTKWH]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+[2021-09-30 15:25:36] [ ERROR] [GlobalExceptionHandler:18] Request method 'PUT' not supported
+[2021-09-30 16:50:19] [ ERROR] [GlobalExceptionHandler:18] JSON parse error: Cannot deserialize value of type `java.lang.String` from Object value (token `JsonToken.START_OBJECT`); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `java.lang.String` from Object value (token `JsonToken.START_OBJECT`)
+ at [Source: (PushbackInputStream); line: 1, column: 94] (through reference chain: com.capone.clinica.model.Paciente["domicilio"])
+[2021-09-30 17:55:21] [ ERROR] [GlobalExceptionHandler:18] could not execute statement; SQL [n/a]; constraint ["FKQTJ6T7MULC2JMFKV92X4CTKWH: PUBLIC.TURNOS FOREIGN KEY(ODONTOLOGO_ID) REFERENCES PUBLIC.ODONTOLOGOS(ID) (1)"; SQL statement:
+delete from odontologos where id=? [23503-200]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+[2021-09-30 17:55:29] [ ERROR] [GlobalExceptionHandler:18] could not execute statement; SQL [n/a]; constraint ["FKQTJ6T7MULC2JMFKV92X4CTKWH: PUBLIC.TURNOS FOREIGN KEY(ODONTOLOGO_ID) REFERENCES PUBLIC.ODONTOLOGOS(ID) (1)"; SQL statement:
+delete from odontologos where id=? [23503-200]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+[2021-09-30 18:21:30] [ ERROR] [GlobalExceptionHandler:18] could not execute statement; SQL [n/a]; constraint ["FKQTJ6T7MULC2JMFKV92X4CTKWH: PUBLIC.TURNOS FOREIGN KEY(ODONTOLOGO_ID) REFERENCES PUBLIC.ODONTOLOGOS(ID) (1)"; SQL statement:
+delete from odontologos where id=? [23503-200]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+[2021-09-30 18:21:39] [ ERROR] [GlobalExceptionHandler:18] could not execute statement; SQL [n/a]; constraint ["FKQTJ6T7MULC2JMFKV92X4CTKWH: PUBLIC.TURNOS FOREIGN KEY(ODONTOLOGO_ID) REFERENCES PUBLIC.ODONTOLOGOS(ID) (1)"; SQL statement:
+delete from odontologos where id=? [23503-200]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+[2021-09-30 18:25:34] [ ERROR] [GlobalExceptionHandler:18] could not execute statement; SQL [n/a]; constraint ["FKQTJ6T7MULC2JMFKV92X4CTKWH: PUBLIC.TURNOS FOREIGN KEY(ODONTOLOGO_ID) REFERENCES PUBLIC.ODONTOLOGOS(ID) (1)"; SQL statement:
+delete from odontologos where id=? [23503-200]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+[2021-09-30 18:31:29] [ ERROR] [GlobalExceptionHandler:18] could not execute statement; SQL [n/a]; constraint ["FKQTJ6T7MULC2JMFKV92X4CTKWH: PUBLIC.TURNOS FOREIGN KEY(ODONTOLOGO_ID) REFERENCES PUBLIC.ODONTOLOGOS(ID) (1)"; SQL statement:
+delete from odontologos where id=? [23503-200]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+[2021-09-30 18:31:37] [ ERROR] [GlobalExceptionHandler:18] could not execute statement; SQL [n/a]; constraint ["FKQTJ6T7MULC2JMFKV92X4CTKWH: PUBLIC.TURNOS FOREIGN KEY(ODONTOLOGO_ID) REFERENCES PUBLIC.ODONTOLOGOS(ID) (1)"; SQL statement:
+delete from odontologos where id=? [23503-200]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+[2021-09-30 18:32:04] [ ERROR] [GlobalExceptionHandler:18] could not execute statement; SQL [n/a]; constraint ["FKQTJ6T7MULC2JMFKV92X4CTKWH: PUBLIC.TURNOS FOREIGN KEY(ODONTOLOGO_ID) REFERENCES PUBLIC.ODONTOLOGOS(ID) (1)"; SQL statement:
+delete from odontologos where id=? [23503-200]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+[2021-09-30 18:32:23] [ ERROR] [GlobalExceptionHandler:18] could not execute statement; SQL [n/a]; constraint ["FKQTJ6T7MULC2JMFKV92X4CTKWH: PUBLIC.TURNOS FOREIGN KEY(ODONTOLOGO_ID) REFERENCES PUBLIC.ODONTOLOGOS(ID) (1)"; SQL statement:
+delete from odontologos where id=? [23503-200]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement

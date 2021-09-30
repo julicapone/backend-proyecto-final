@@ -20,6 +20,6 @@ public class Odontologo {
     private String matricula;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "odontologo")
+    @OneToMany(mappedBy = "odontologo", cascade = CascadeType.ALL)
     private Set<Turno> turnos;
 }

@@ -22,6 +22,6 @@ public class Paciente {
     private String fechaIngreso;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "paciente")
+    @OneToMany(mappedBy = "paciente", cascade = CascadeType.ALL)
     private Set<Turno> turnos;
 }
