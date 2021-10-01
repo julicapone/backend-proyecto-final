@@ -43,4 +43,9 @@ public class OdontologoServiceImpl implements OdontologoService {
     public void eliminar(Long id) {
         odontologoRepository.deleteById(id);
     }
+
+    @Override
+    public List<Odontologo> traerPorApellido(String apellido) {
+        return odontologoRepository.traerPorApellido(apellido);
+    }
 }

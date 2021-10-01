@@ -13,7 +13,8 @@ import java.util.Set;
 @Setter
 public class Odontologo {
     @Id
-    @GeneratedValue
+    @SequenceGenerator(name = "odontologo_sequence", sequenceName = "odontologo_sequence", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "odontologo_sequence")
     private Long id;
     private String apellido;
     private String nombre;

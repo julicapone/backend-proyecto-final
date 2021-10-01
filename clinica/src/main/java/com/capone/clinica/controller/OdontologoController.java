@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 @RestController
 @RequestMapping("/api/odontologos")
@@ -43,5 +44,12 @@ public class OdontologoController {
     public ResponseEntity<?> eliminarOdontologo(@PathVariable Long id) {
         odontologoService.eliminar(id);
         return ResponseEntity.status(HttpStatus.OK).body("Odontólogo eliminado.");
+    }
+
+    //http://localhost:8080/api/odontologos/porApellido?apellido=Sieiro
+    @GetMapping("/porApellido")
+    public List<Odontologo> TraerPorApellido(@RequestParam String apellido)
+    {
+        return odontologoService.traerPorApellido(apellido);
     }
 }
