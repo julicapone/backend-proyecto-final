@@ -10,8 +10,11 @@ $(document).ready(function(){
             apellido:  $("#apellido").val(),
             dni: $("#dni").val(),
             domicilio:  $("#domicilio").val(),
-            fechaAlta: $("#fecha").val(),
+            fechaIngreso: $("#fecha").val()
         }
+
+        console.log(formData)
+
             $.ajax({
                 url: '/api/pacientes/',
                 type: 'PUT',
@@ -20,33 +23,19 @@ $(document).ready(function(){
                 dataType : 'json',
                 async: false,
                 cache: false,
-                success: function (response) {
-                    let paciente = response;
-
+                success: function () {
                     let successAlert = '<div class="alert alert-success alert-dismissible">' +
                                             '<button type="button" class="close" data-dismiss="alert">&times;</button>' +
-                                            '<strong> El odontólogo se actualizó con éxito </strong></div>'
-
-
-                    $("#tr_" + pacienteId + " td.td_first_name").text(paciente.nombre.toUpperCase());
-                    $("#tr_" + pacienteId + " td.td_last_name").text(paciente.apellido.toUpperCase());
-                    $("#tr_" + pacienteId + " td.td_dni").text(paciente.dni);
-                    $("#tr_" + pacienteId + " td.td_domicilio").text(paciente.domicilio);
+                                            '<strong>El odontólogo se actualizó</strong></div>'
 
                     $("#response").empty();
                     $("#response").append(successAlert);
                     $("#response").css({"display": "block"});
-                },
 
-                error: function (response) {
-                    let errorAlert = '<div class="alert alert-danger alert-dismissible">' +
-                                        '<button type="button" class="close" data-dismiss="alert">&times;</button>' +
-                                        '<strong> Ocurrió un error inesperado </strong></div>';
-
-                    $("#response").empty();
-                    $("#response").append(errorAlert);
-                    $("#response").css({"display": "block"});
-                }
+                    setTimeout(function (){
+                        location.reload()
+                    }, 1000);
+                }()
             });
         } catch(error){
             console.log(error);
@@ -68,6 +57,7 @@ $(document).ready(function(){
                 $("#apellido").val(paciente.apellido);
                 $("#dni").val(paciente.dni);
                 $("#domicilio").val(paciente.domicilio);
+                $("#fecha").val(paciente.fechaIngreso);
                 $("#div_paciente_updating").css({"display": "block"});
             },
             error: function(error){

@@ -4,27 +4,45 @@ $(document).ready(function(){
         try {
             let odontologoId = $("#odontologo_id").val();
             
-            let formData = {
-                id: $("#odontologo_id").val(),
-                nombre : $("#nombre").val(),
-                apellido :  $("#apellido").val(),
-                matricula: $("#matricula").val(),
-            }
+        let formData = {
+            id: $("#odontologo_id").val(),
+            nombre : $("#nombre").val(),
+            apellido :  $("#apellido").val(),
+            matricula: $("#matricula").val(),
+        }
 
-            $.ajax({
-                url: '/api/odontologos/',
-                type: 'PUT',
-                contentType : "application/json",
-                data: JSON.stringify(formData),
-                dataType : 'json',
-                async: false,
-                cache: false
-            });
+        let dataOdontólogo = {
+            nombre : $("#nombre").val(),
+            apellido :  $("#apellido").val(),
+            matricula: $("#matricula").val(),
+        }
+
+        $.ajax({
+            url: '/api/odontologos/',
+            type: 'PUT',
+            contentType : "application/json",
+            data: JSON.stringify(formData),
+            dataType : 'json',
+            async: false,
+            cache: false,
+            success: function () {
+                let successAlert = '<div class="alert alert-success alert-dismissible">' +
+                                        '<button type="button" class="close" data-dismiss="alert">&times;</button>' +
+                                        '<strong> El odontólogo se actualizó con éxito </strong></div>'
+
+                $("#response").empty();
+                $("#response").append(successAlert);
+                $("#response").css({"display": "block"});
+
+                setTimeout(function (){
+                    location.reload()
+                }, 1000);
+            }()
+        });
         } catch(error){
             console.log(error);
             alert(error);
         }
-        location.reload()
     });
 
     $(document).on("click", "table button.btn_id", function(){
@@ -41,10 +59,6 @@ $(document).ready(function(){
                 $("#apellido").val(odontologo.apellido);
                 $("#matricula").val(odontologo.matricula);
                 $("#div_odontologo_updating").css({"display": "block"});
-            },
-            error: function(error){
-                console.log(error);
-                alert("Error: " + error);
             }
         });        
     });
